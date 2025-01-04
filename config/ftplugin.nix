@@ -1,14 +1,12 @@
-{
-  lib,
-  ...
-}:
 let
-  ftAttrs = name: {files."ftplugin/${name}.lua" = {
+  fileTypes = ["c" "cpp" "jinja2" "lua" "nix" "rust" "sh" "tex"];
+  genericOptions = {
     localOpts = {
       shiftwidth = 2;
     };
   };
-  };
-  populateFiletypePlugin = list: lib.foldl' (a: b: a // (ftAttrs b)) {} list;
-in
-populateFiletypePlugin ["c" "cpp" "jinja2" "lua" "nix" "rust" "sh" "tex"]
+  buildNameValueAttrs = builtins.map (ft: {name = "ftplugin/${ft}.lua"; value = genericOptions;}) fileTypes;
+in 
+{
+  files = builtins.listToAttrs buildNameValueAttrs;
+}

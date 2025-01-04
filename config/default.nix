@@ -2,13 +2,15 @@
   # Import all your configuration modules here
   imports = [
     ./ftplugin.nix
+    #./testing.nix
     ./mappings
-    ./options.nix
     ./plugins 
+    ./sets.nix
+    ./colorschemes
   ];
 
   keys.enable = true;
-  colorschemes.tokyonight.enable = true;
+  color.kanagawa.enable = true;
   modules = {
     completion.enable = true;
     dressing.enable = true;

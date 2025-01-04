@@ -4,17 +4,17 @@
   ...
 }:
 let
-  cfg = config.colorschemes.tokyonight;
+  cfg = config.color.tokyonight;
 in
 {
-  options.colorschemes.tokyonight.enable = lib.mkEnableOption "Enables tokyonight colorscheme";
+  options.color.tokyonight.enable = lib.mkEnableOption "Enables tokyonight colorscheme";
 
   config = lib.mkIf cfg.enable {
     colorschemes.tokyonight = {
       enable = true;
 
       settings = {
-        style = "wave";
+        style = "moon";
         light_style = "day";
         transparent = false;
         dim_inactive = false;

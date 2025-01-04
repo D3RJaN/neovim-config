@@ -1,4 +1,11 @@
 {
+  performance.byteCompileLua = {
+    enable = true;
+    nvimRuntime = true;
+    configs = true;
+    plugins = true;
+  };
+
   opts = {
     termguicolors = true;
     exrc = true;
@@ -16,9 +23,9 @@
     hlsearch = false;
     incsearch = true;
     updatetime = 50;
-    #swapfile = false;
-    #backup = false;
+    swapfile = false;
+    backup = false;
     #undodir = os.getenv("HOME") .. "/.config/nvim/undodir";
-    #undofile = true;
+    undofile = true;
   };
 }
