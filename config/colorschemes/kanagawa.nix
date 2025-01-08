@@ -13,28 +13,30 @@ in
     colorschemes.kanagawa = {
       enable = true;
 
-      theme = "wave";
-      undercurl = true;
-      commentStyle.italic = true;
-      functionStyle = {};
-      keywordStyle.italic = true;
-      statementStyle.bold = true;
-      typeStyle = {};
-      transparent = false;
-      dimInactive = false;
-      terminalColors = true;
-      colors = {
-        palette = {};
-        theme = {
-          wave = {};
-          lotus = {};
-          dragon = {};
-          all = {};
+      settings = {
+        theme = "wave";
+        undercurl = true;
+        commentStyle.italic = true;
+        functionStyle = {};
+        keywordStyle.italic = true;
+        statementStyle.bold = true;
+        typeStyle = {};
+        transparent = false;
+        dimInactive = false;
+        terminalColors = true;
+        colors = {
+          palette = {};
+          theme = {
+            wave = {};
+            lotus = {};
+            dragon = {};
+            all = {};
+          };
         };
-      };
-      background = {
-        dark = "wave";
-        light = "lotus";
+        background = {
+          dark = "wave";
+          light = "lotus";
+        };
       };
     };
   };

@@ -14,6 +14,7 @@
   modules = {
     completion.enable = true;
     dressing.enable = true;
+    gitsigns.enable = true;
     nvim-tree.enable = true;
     telescope.enable = true;
     vimtex.enable = true;

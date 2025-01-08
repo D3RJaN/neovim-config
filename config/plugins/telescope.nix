@@ -40,6 +40,9 @@ in
   options.modules.telescope.enable = lib.mkEnableOption "Enables telescope";
 
   config = lib.mkIf cfg.enable {
+    # Dependency:
+    modules.web-devicons.enable = true;
+
     plugins.telescope = {
       enable = true;
       extensions = {
